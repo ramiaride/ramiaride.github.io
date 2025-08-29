@@ -1,0 +1,160 @@
+.product-container {
+  margin: 60px auto;
+  padding: 20px;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.product-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.product-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.product-title {
+  background: linear-gradient(150deg, #EAE7CF 20%, #C9C581 100%);
+  background-size: 200% 200%;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  text-align: start;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-weight: 800;
+  margin: 0;
+  display: block;
+}
+
+.product-subtitle {
+  background: linear-gradient(120deg, #EAE7CF 20%, #C9C581 100%);
+  background-size: 200% 200%;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 35px;
+  text-align: start;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 80%;
+  margin-top: 4px;
+  display: block;
+  font-family: 'Montserrat';
+  font-weight: 800;
+}
+
+.product-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 15px;
+  max-width: 100%;
+  color: #BCA662;
+  text-align: justify;
+}
+
+.product-main-image img {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.product-carousel {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  cursor: grab;
+  user-select: none;
+}
+
+.product-carousel:active {
+  cursor: grabbing;
+}
+
+.product-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.embla {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.embla__container {
+  display: flex;
+  width: 80%;
+  gap: 20px;
+  will-change: transform;
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+  width: 400px;
+  scroll-snap-align: none;
+}
+
+.carousel-image-frame {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+  background: #f4f4f4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-img-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down ;
+  cursor: grab;
+  transition: transform 0.3s ease;
+  background-color: white;
+}
+
+.carousel-img-inner:hover {
+  transform: scale(1.05);
+}
+
+/* 🆕 Modal Styles */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}

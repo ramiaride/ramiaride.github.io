@@ -1,0 +1,71 @@
+.topbar {
+  position: fixed ;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 10;
+
+}
+
+ .logo {
+  height: 150px;
+  width: 105px;
+  margin-left: 8%;
+  margin-top: 3%;
+  opacity: 0; /* Start fully transparent */
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s; /* Optional delay */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.logo:hover {
+transform: scale(1.01);
+
+}
+.dropdown {
+  position: fixed;
+  margin-right: 8%;
+  margin-top: 3%;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 8%;
+  margin-top: 3%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+

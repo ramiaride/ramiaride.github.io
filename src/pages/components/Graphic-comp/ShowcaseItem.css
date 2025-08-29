@@ -1,0 +1,146 @@
+.ShowcaseItem-container {
+  margin: 60px auto;
+  padding: 20px;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ShowcaseItem-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.ShowcaseItem-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.ShowcaseItem-title {
+  background: linear-gradient(150deg, #EAE7CF 20%, #C9C581 100%);
+  background-size: 200% 200%;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 50px;
+  text-align: start;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-weight: 800;
+  margin: 0;
+  display: block;
+  margin-top: 50px;
+}
+
+.ShowcaseItem-subtitle {
+  background: linear-gradient(120deg, #EAE7CF 20%, #C9C581 100%);
+  background-size: 200% 200%;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 35px;
+  text-align: start;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 80%;
+  margin-top: 4px;
+  display: block;
+  font-family: 'Montserrat';
+  font-weight: 800;
+}
+
+.ShowcaseItem-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 15px;
+  max-width: 100%;
+  color: #BCA662;
+  text-align: justify;
+}
+
+.ShowcaseItem-main-image img {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.ShowcaseItem-carousel {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  cursor: grab;
+  user-select: none;
+}
+
+.ShowcaseItem-carousel:active {
+  cursor: grabbing;
+}
+
+.ShowcaseItem-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.embla {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.embla__container {
+  display: flex;
+  gap: 20px;
+  will-change: transform;
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 👇 NEW: Wrapper to align image to bottom */
+.carousel-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+/* 👇 Image styling */
+.carousel-img {
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.carousel-img:hover {
+  transform: scale(1.03);
+}
+
+/* 👇 Title styling */
+.carousel-img-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #C9C581;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: left;
+  min-height: 40px;
+}

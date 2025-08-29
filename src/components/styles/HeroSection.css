@@ -1,0 +1,102 @@
+/* Container for the hero section */
+.hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Overlay that holds both images */
+.hero-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Both hero images stacked in the same space */
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  animation: zoomInOut 12s ease-in-out infinite alternate,
+             blurFocus 8s ease-in-out infinite;
+  filter: brightness(0.6);
+  z-index: 1;
+}
+
+/* Make the visible image appear on top with opacity */
+.hero-image.visible {
+  opacity: 1;
+  z-index: 2;
+}
+
+.hero-image.hidden {
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Animation for subtle zoom */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+/* Animation for soft focus blur and brightness pulse */
+@keyframes blurFocus {
+  0% {
+    filter: brightness(0.6) blur(0px);
+  }
+  50% {
+    filter: brightness(0.6) blur(2.5px);
+  }
+  100% {
+    filter: brightness(0.6) blur(0px);
+  }
+}
+
+/* Hero quote text */
+.hero p {
+  position: absolute;
+  z-index: 1000;
+  color: white;
+  font-size: 2.1rem;
+  text-align: start;
+  max-width: 60%;
+  font-family: 'Lora', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 2, 0.4);
+  margin-bottom: 0px;
+
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  animation: fadeScaleUp 1.2s ease forwards;
+  animation-delay: 1s;
+}
+
+/* Fade-in and slight scale-up for the text */
+@keyframes fadeScaleUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

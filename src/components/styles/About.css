@@ -1,0 +1,213 @@
+.About-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 160vh;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* About content */
+.About-content {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: center;
+  width: 55%;
+  min-height: 80vh;
+  margin-right: 70px;
+  position: relative;
+  z-index: 10;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(188, 166, 98, 0.2);
+  border-radius: 20px;
+}
+
+/* Title styles */
+.About-title {
+  background: linear-gradient(150deg, #EAE7CF 20%, #C9C581 100%);
+  background-size: 200% 200%;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  text-align: start;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-family: 'Lora', serif;
+
+  opacity: 0;
+  transform: translateY(10px);
+  letter-spacing: 10px;
+  transition: none;
+}
+
+/* Paragraph styles */
+.content-par {
+  color: #BCA662;
+  font-size: x-large;
+  margin-top: 60px;
+  line-height: 39px;
+  font-family: 'Lora', serif;
+  text-align: justify;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: none;
+}
+
+/* Animated state triggers */
+.About-main.animate .About-title {
+  animation: fadeInLetters 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.About-main.animate .content-par {
+  animation: fadeSlideUp 1.2s ease forwards;
+  animation-delay: 1.2s;
+}
+
+/* Floating blobs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.2;
+  animation: float 12s ease-in-out infinite alternate;
+  z-index: 1;
+}
+.blob1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(150deg, #EAE7CF 20%, #C9C581 100%);
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+.blob2 {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(150deg, #EAE7CF 20%, #C9C581 100%);
+  bottom: 10%;
+  right: 10%;
+  animation-delay: 6s;
+}
+
+/* Geometric shapes */
+.shape {
+  position: absolute;
+  background: linear-gradient(150deg, #EAE7CF 20%, #C9C581 100%);
+  opacity: 0.15;
+  z-index: 1;
+  transform-origin: center;
+  animation: rotateSlow 20s linear infinite;
+}
+.shape1 {
+  width: 120px;
+  height: 12px;
+  top: 30%;
+  right: 20%;
+  border-radius: 8px;
+  animation-delay: 0s;
+}
+.shape2 {
+  width: 10px;
+  height: 200px;
+  bottom: 25%;
+  left: 15%;
+  border-radius: 6px;
+  animation-delay: 10s;
+}
+
+/* Decorative dots */
+.decorative-dot {
+  position: absolute;
+  background: #BCA662;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 2;
+}
+.dot1 {
+  width: 15px;
+  height: 15px;
+  top: 5%;
+  right: 10%;
+}
+.dot2 {
+  background: linear-gradient(150deg, #EAE7CF 20%, #C9C581 100%);
+  width: 40px;
+  height: 40px;
+  bottom: 15%;
+  left: 5%;
+}
+
+/* Decorative lines */
+.decorative-line {
+  position: absolute;
+  background: #BCA662;
+  opacity: 0.15;
+  z-index: 2;
+}
+.line1 {
+  width: 3px;
+  height: 60px;
+  top: 20%;
+  left: 8%;
+  border-radius: 2px;
+}
+.line2 {
+  width: 2px;
+  height: 40px;
+  bottom: 10%;
+  right: 15%;
+  border-radius: 2px;
+}
+
+/* Animations for floating and rotation */
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  100% {
+    transform: translateY(-30px) translateX(20px);
+  }
+}
+@keyframes rotateSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Text Animations */
+@keyframes fadeInLetters {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    letter-spacing: 10px;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 4px;
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

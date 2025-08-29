@@ -1,0 +1,105 @@
+.blocks-main {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.block {
+  box-sizing: border-box;
+  position: relative; /* Needed for absolutely positioned images */
+  overflow: hidden;
+}
+
+.block-1 {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 100%;
+  background-color: #F2F2F2;
+}
+
+.block-1:hover {
+  background-color: #BEBB98;
+  transition: background-color 1s ease;
+}
+
+.right-side {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.block-2,
+.block-3 {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  position: relative;
+}
+
+.block-2 {
+  background-color: #F5F5F5;
+}
+
+.block-2:hover {
+  background-color: #E1E0CB;
+  transition: background-color 1s ease;
+}
+
+.block-3 {
+  background-color: #FFFFFF;
+}
+
+.block-3:hover {
+  background-color: #ACAA92;
+  transition: background-color 1s ease;
+}
+
+/* Headings */
+.blocks-main h1 {
+  align-self: flex-end;
+  margin-bottom: 100px;
+  margin-left: 80px;
+  font-size: 40px;
+  max-width: 5%;
+  z-index: 2;
+  position: relative;
+}
+
+/* Common image style */
+.product-img,
+.interior-img,
+.graphic-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: translate(60px, 100px);
+  opacity: 0;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  z-index: 1;
+}
+
+/* When in view */
+.animate-img {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+/* Individual positioning tweaks */
+.product-img {
+  top: 5%;
+  left: 10%;
+}
+
+.interior-img {
+  bottom: 15%;
+  right: -10%;
+}
+
+.graphic-img {
+  top: 10%;
+  left: 10%;
+}
