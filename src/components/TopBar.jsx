@@ -1,4 +1,4 @@
-import './styles/Topbar.css';
+import './styles/TopBar.css';
 import logo from '/assets/logo.png'
 import { useNavigate } from 'react-router-dom';
 
