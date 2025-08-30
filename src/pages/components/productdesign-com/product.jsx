@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import './Product.css';
+import './product.css';
 import '@fontsource/montserrat/800.css';
 
 function Product({
