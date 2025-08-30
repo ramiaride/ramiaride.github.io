@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './styles/HeroSection.css';
-import heroImage1 from '../assets/3.png';
-import heroImage2 from '../assets/5.png';
+import heroImage1 from '/assets/3.png';
+import heroImage2 from '/assets/5.png';
 
 function HeroSection() {
   const [currentImage, setCurrentImage] = useState(0);

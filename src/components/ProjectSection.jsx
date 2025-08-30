@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import './styles/ProjectSection.css';
-import shavingmachine from '../assets/shaving machine.png';
-import smallsf from '../assets/SMALL SF.png';
-import torredivina from '../assets/Artboard 1.png';
+import shavingmachine from '/assets/shaving-machine.png';
+import smallsf from '/assets/SMALL SF.png';
+import torredivina from '/assets/Artboard 1.png';
 import { useNavigate } from 'react-router-dom';
 
 function ProjectSection() {

@@ -2,37 +2,37 @@ import React from 'react';
 import Product from './components/productdesign-com/product';
 
 // Domenico
-import D1 from '../assets/interiors/Domenico/kitchen1.jpg' ;
-import D2 from '../assets/interiors/Domenico/kitchen2.jpg' ;
-import D3 from '../assets/interiors/Domenico/sala1.jpg' ;
-import D4 from '../assets/interiors/Domenico/sala2.jpg' ;
+import D1 from '/assets/interiors/Domenico/kitchen1.jpg' ;
+import D2 from '/assets/interiors/Domenico/kitchen2.jpg' ;
+import D3 from '/assets/interiors/Domenico/sala1.jpg' ;
+import D4 from '/assets/interiors/Domenico/sala2.jpg' ;
 
 //WONDER 
-import W1 from '../assets/interiors/Wonder/GENERAL.png' ;
-import W2 from '../assets/interiors/Wonder/LAB 2.jpg' ;
-import W3 from '../assets/interiors/Wonder/PLANETARY 11.jpg' ;
-import W4 from '../assets/interiors/Wonder/recepytion 1.jpg' ;
-import W5 from '../assets/interiors/Wonder/theater 22.jpg' ;
+import W1 from '/assets/interiors/Wonder/GENERAL.png' ;
+import W2 from '/assets/interiors/Wonder/LAB 2.jpg' ;
+import W3 from '/assets/interiors/Wonder/PLANETARY 11.jpg' ;
+import W4 from '/assets/interiors/Wonder/recepytion 1.jpg' ;
+import W5 from '/assets/interiors/Wonder/theater 22.jpg' ;
 
 //TORRE DIVINA
-import T1 from '../assets/interiors/TorreDivina/gf3croped.jpg' ;
-import T2 from '../assets/interiors/TorreDivina/gf2.jpg' ;
-import T3 from '../assets/interiors/TorreDivina/gf 1.jpg' ;
-import T4 from '../assets/interiors/TorreDivina/ff2.jpg' ;
-import T5 from '../assets/interiors/TorreDivina/BIG SF.png' ;
-import T6 from '../assets/interiors/TorreDivina/sf 1.jpg' ;
-import T7 from '../assets/interiors/TorreDivina/terrace 1.jpg' ;
-import T8 from '../assets/interiors/TorreDivina/terrace222.jpg' ;
+import T1 from '/assets/interiors/TorreDivina/gf3croped.jpg' ;
+import T2 from '/assets/interiors/TorreDivina/gf2.jpg' ;
+import T3 from '/assets/interiors/TorreDivina/gf 1.jpg' ;
+import T4 from '/assets/interiors/TorreDivina/ff2.jpg' ;
+import T5 from '/assets/interiors/TorreDivina/BIG SF.png' ;
+import T6 from '/assets/interiors/TorreDivina/sf 1.jpg' ;
+import T7 from '/assets/interiors/TorreDivina/terrace 1.jpg' ;
+import T8 from '/assets/interiors/TorreDivina/terrace222.jpg' ;
 
 // LAILA
-import L1 from '../assets/interiors/Laila/1.jpg' ;
-import L2 from '../assets/interiors/Laila/2.jpg' ;
-import L3 from '../assets/interiors/Laila/3.jpg' ;
-import L4 from '../assets/interiors/Laila/4.jpg' ;
-import L5 from '../assets/interiors/Laila/5.jpg' ;
-import L6 from '../assets/interiors/Laila/6.jpg' ;
-import L7 from '../assets/interiors/Laila/7.jpg' ;
-import L8 from '../assets/interiors/Laila/8.jpg' ;
+import L1 from '/assets/interiors/Laila/1.jpg' ;
+import L2 from '/assets/interiors/Laila/2.jpg' ;
+import L3 from '/assets/interiors/Laila/3.jpg' ;
+import L4 from '/assets/interiors/Laila/4.jpg' ;
+import L5 from '/assets/interiors/Laila/5.jpg' ;
+import L6 from '/assets/interiors/Laila/6.jpg' ;
+import L7 from '/assets/interiors/Laila/7.jpg' ;
+import L8 from '/assets/interiors/Laila/8.jpg' ;
 
 function InteriorDesign() {
   const width='65%' ; 

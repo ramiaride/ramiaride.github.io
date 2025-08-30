@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import './ShowcaseItem.css';
 import '@fontsource/montserrat/800.css';
@@ -17,8 +17,6 @@ function ShowcaseItem({
     loop: false,
     containScroll: 'trimSnaps',
   });
-
-  const [selectedImage, setSelectedImage] = useState(null); // 👈 modal image state
 
   return (
     <div className="ShowcaseItem-container">
@@ -54,7 +52,7 @@ function ShowcaseItem({
             >
               <div
                 className="carousel-img-wrapper"
-                style={{ height: (img.height || 300) + 50 }}
+                style={{ height: (img.height || 300) + 50 }} // 50px reserved for title
               >
                 {img.title && (
                   <div className="carousel-img-title">{img.title}</div>
@@ -67,27 +65,12 @@ function ShowcaseItem({
                     width: img.width || '100%',
                     height: img.height || '300px',
                   }}
-                  onClick={() => setSelectedImage(img.src)} // 👈 enable modal on click
                 />
               </div>
             </div>
           ))}
         </div>
       </div>
-
-      {/* 👇 Modal */}
-      {selectedImage && (
-        <div
-          className="image-modal"
-          onClick={() => setSelectedImage(null)}
-        >
-          <img
-            src={selectedImage}
-            alt="Enlarged view"
-            className="modal-image"
-          />
-        </div>
-      )}
     </div>
   );
 }
