@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import './styles/ProjectSection.css';
-import shavingmachine from '/assets/shaving-machine.png';
+import shavingmachine from '/assets/SHAVING MACHINE.png';
 import smallsf from '/assets/SMALL SF.png';
 import torredivina from '/assets/Artboard 1.png';
 import { useNavigate } from 'react-router-dom';
@@ -27,9 +27,16 @@ function ProjectSection() {
     };
   }, []);
 
+function mynav() {
+  console.log('rafat');
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Optional smooth scroll
+  navigate('/ProductDesign');
+
+}
+
   return (
-    <div className="blocks-main" ref={sectionRef}>
-      <div className="block block-1" onClick={() => navigate('/ProductDesign')}>
+    <div className="blocks-main" ref={sectionRef} onClick={() => mynav2()} >
+      <div className="block block-1" onClick={() => mynav()}>
         <h1 className="Product-design">PRODUCT DESIGN</h1>
         <img
           src={shavingmachine}

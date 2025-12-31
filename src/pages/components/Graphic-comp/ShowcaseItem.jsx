@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import './ShowcaseItem.css';
 import '@fontsource/montserrat/800.css';
+import useWindowSize from '../../../components/useWindowSize';
 
 function ShowcaseItem({
   title,
@@ -10,14 +11,18 @@ function ShowcaseItem({
   DescMaxWidth,
   mainImage = '',
   carouselImages,
-  descMarginTop = 15
+  descMarginTop = 15,
 }) {
   const [emblaRef] = useEmblaCarousel({
     dragFree: true,
     loop: false,
     containScroll: 'trimSnaps',
   });
-
+const { gwidth } = useWindowSize();
+  const [selectedImage, setSelectedImage] = useState(null); // 🆕 Modal state
+const subh=0;
+const subw=0;
+const mobilelimit=800;
   return (
     <div className="ShowcaseItem-container">
       <div className="ShowcaseItem-header">
@@ -28,7 +33,7 @@ function ShowcaseItem({
             className="ShowcaseItem-description"
             style={{
               marginTop: descMarginTop,
-              maxWidth: DescMaxWidth == null ? "100%" : DescMaxWidth,
+              maxWidth: DescMaxWidth == null ? '100%' : DescMaxWidth,
             }}
           >
             {description}
@@ -52,7 +57,7 @@ function ShowcaseItem({
             >
               <div
                 className="carousel-img-wrapper"
-                style={{ height: (img.height || 300) + 50 }} // 50px reserved for title
+                style={{ height: (img.height || 300) + 50 }}
               >
                 {img.title && (
                   <div className="carousel-img-title">{img.title}</div>
@@ -64,13 +69,29 @@ function ShowcaseItem({
                   style={{
                     width: img.width || '100%',
                     height: img.height || '300px',
+                    cursor: 'pointer',
                   }}
+                  onClick={() => setSelectedImage(img.src)} // 🆕
                 />
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* 🆕 Image Modal */}
+      {selectedImage && (
+        <div
+          className="image-modal"
+          onClick={() => setSelectedImage(null)}
+        >
+          <img
+            src={selectedImage}
+            alt="Enlarged view"
+            className="modal-image"
+          />
+        </div>
+      )}
     </div>
   );
 }

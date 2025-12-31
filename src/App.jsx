@@ -92,10 +92,9 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="app" style={{ position: 'relative', minHeight: '100vh' }}>
-        <Topbar />
-        <AnimatedRoutes />
-      </div>
+   <Topbar />
+<AnimatedRoutes />
+
     </Router>
   );
   

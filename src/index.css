@@ -5,3 +5,12 @@ font-family: 'Montserrat', sans-serif;
 p {
     font-family: 'Montserrat', sans-serif;
 }
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* For any container that might overflow */
+* {
+  box-sizing: border-box;
+}

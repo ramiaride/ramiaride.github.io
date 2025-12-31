@@ -1,3 +1,13 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
 .product-container {
   margin: 60px auto;
   padding: 20px;
@@ -157,4 +167,113 @@
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease;
+}
+
+
+@media (max-width:768px) {
+  
+
+  .product-title {
+  background: linear-gradient(150deg, #EAE7CF 20%, #C9C581 100%);
+  background-size: 200% 200%;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-weight: 800;
+  margin: 0;
+  display: block;
+  justify-self: center;
+}
+
+  .product-subtitle {
+  background: linear-gradient(120deg, #EAE7CF 20%, #C9C581 100%);
+  background-size: 200% 200%;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 25px;
+  text-align: start;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 80%;
+  margin-top: 4px;
+  display: block;
+  font-family: 'Montserrat';
+  font-weight: 800;
+  justify-self: center;
+}
+
+  .product-main-image img {
+    width: 100%; /* Make image responsive */
+    max-width: 320px; /* Optional max width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px;
+  }
+   .embla {
+    overflow: visible; /* allow horizontal scroll */
+    width: 100%;
+    margin-top: 20px;
+      padding: 0 16px;
+  }
+
+.product-container {
+    margin: 60px auto;
+    padding: 10px;
+    max-width: 100%; /* Fit mobile width */
+    box-sizing: border-box; /* Ensure padding included in width */
+    overflow-x: hidden; /* extra safety */
+  }
+
+.carousel-img-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down ;
+  cursor: grab;
+  transition: transform 0.3s ease;
+  background-color: white;
+}
+ .carousel-image-frame {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+  background: #f4f4f4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+ .embla__slide {
+  flex: 0 0 auto;
+  width: 75vw; /* 👈 smaller width to show part of next image */
+  max-width: 280px;
+  scroll-snap-align: start;
+}
+  .embla__container {
+    display: flex;
+    gap: 20px;
+    width: max-content; /* so container grows with slides */
+    max-width: 100%;
+    
+    scroll-snap-type: x mandatory;
+  }
+
+.product-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 15px;
+  min-width: 90%;
+  color: #BCA662;
+  text-align: justify;
+  justify-self: center;
+}
+
+
 }

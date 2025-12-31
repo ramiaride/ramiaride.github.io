@@ -1,6 +1,7 @@
 import React from 'react';
 import ShowcaseItem from './components//Graphic-comp/ShowcaseItem';
 import './styles/graphicdesign.css'; 
+import Topbar from '../components/TopBar';
 
 import A1 from '/assets/graphic/2025/acai.png';
 import A2 from '/assets/graphic/2025/let-the-taste-speak.png';
@@ -22,41 +23,51 @@ import B5 from '/assets/graphic/2024/Lailaw.png';
 import B6 from '/assets/graphic/2024/Asset 2.png';
 import B7 from '/assets/graphic/2024/Artboard 1-100.jpg';
 import B8 from '/assets/graphic/2024/TORRE.png';
+import useWindowSize from '../components/useWindowSize';
 
 // 👆 Replace with real 2024 assets as needed
 
 function GraphicDesign() {
+  const { width } = useWindowSize();
+  const mobilelimit=800;
+
+   function ifm (a,b) {
+    return width<mobilelimit? b:a ;
+  }
+
   const itemobjects2025 = [
-    { src: A2, title: "ACAI SANTO SPIRITO", width: 500, height: 300 },
-    { src: A1, title: "", width: 200, height: 300 },
-    { src: A3, title: "RAMI ARIDE LOGO", width: 500, height: 300 },
-    { src: A4, title: "", width: 200, height: 300 },
-    { src: A5, title: "TWELVE DESIGN LOGO", width: 200, height: 300 },
-    { src: A6, title: "SANTO FALAFEL BUSINESS CARD", width: 500, height: 300 },
-    { src: A7, title: "", width: 500, height: 300 },
-    { src: A8, title: "", width: 500, height: 300 },
-    { src: A9, title: "BEDROOM POSTER ", width: 280, height: 300 },
-    { src: A10, title: "", width: 280, height: 300 },
-    { src: A11, title: "", width: 500, height: 300 },
+    { src: A2, title: "ACAI SANTO SPIRITO", width: ifm(500,265), height:ifm(300,160) },
+    { src: A1, title: "", width: ifm(200,107), height:ifm(300,160) },
+    { src: A3, title: "RAMI ARIDE LOGO", width: ifm(500,265), height:ifm(300,160) },
+    { src: A4, title: "", width: ifm(200,107), height:ifm(300,160) },
+    { src: A5, title: "TWELVE DESIGN LOGO", width: ifm(200,107), height:ifm(300,160) },
+    { src: A6, title: "SANTO FALAFEL BUSINESS CARD", width: ifm(500,265), height:ifm(300,160) },
+    { src: A7, title: "", width: ifm(500,265), height:ifm(300,160) },
+    { src: A8, title: "", width: ifm(500,265), height:ifm(300,160) },
+    { src: A9, title: "BEDROOM POSTER ", width: ifm(280,150), height:ifm(300,160) },
+    { src: A10, title: "", width: ifm(280,150), height:ifm(300,160) },
+    { src: A11, title: "", width: ifm(500,265), height:ifm(300,160) },
   ];
 
   const itemobjects2024 = [
    
-    { src: B2, title: "PERFUME POSTER", width:200, height: 300 },
-     { src: B3, title: "MUG POSTER", width:200, height: 300 },
-   { src: B4, title: "BLACK PEPPER POSTER", width:200, height: 300 },
-    { src: B5, title: "LAILA LOGO", width:200, height: 300 },
-     { src: B7, title: "TORRE DIVINA LOGO", width:200, height: 300 },
-    { src: B8, title: "", width:200, height: 300 },
-    { src: B6, title: "LION LOGO", width:480, height: 300 },
-     { src: B1, title: "ACCADEMIA ITALIANA ENTRANCE WALLPAPER", width:1200, height: 300 },
+    { src: B2, title: "PERFUME POSTER", width: ifm(200,107), height:ifm(300,160) },
+     { src: B3, title: "MUG POSTER", width: ifm(200,107), height:ifm(300,160) },
+   { src: B4, title: "BLACK PEPPER POSTER", width: ifm(200,107), height:ifm(300,160) },
+    { src: B5, title: "LAILA LOGO", width: ifm(200,107), height:ifm(300,160) },
+     { src: B7, title: "TORRE DIVINA LOGO", width: ifm(200,107), height:ifm(300,160) },
+    { src: B8, title: "", width: ifm(200,107), height:ifm(300,160) },
+    { src: B6, title: "LION LOGO", width: ifm(480,256), height:ifm(300,160) },
+     { src: B1, title: "ACCADEMIA ITALIANA ENTRANCE WALLPAPER", width: ifm(1200,640), height:ifm(300,160) },
     
 
     // Add more images here
   ];
 
   return (
+    
     <div className='GraphicD'>
+      
       {/* First carousel - 2025 */}
       <ShowcaseItem
         title="2025"

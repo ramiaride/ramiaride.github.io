@@ -7,4 +7,12 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
 
+/* For any container that might overflow */
+* {
+  box-sizing: border-box;
+}

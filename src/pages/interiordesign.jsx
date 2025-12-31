@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from './components/productdesign-com/product';
+import Topbar from '../components/TopBar';
 
 // Domenico
 import D1 from '/assets/interiors/Domenico/kitchen1.jpg' ;
@@ -34,10 +35,14 @@ import L6 from '/assets/interiors/Laila/6.jpg' ;
 import L7 from '/assets/interiors/Laila/7.jpg' ;
 import L8 from '/assets/interiors/Laila/8.jpg' ;
 
+import useWindowSize from '../components/useWindowSize'
 function InteriorDesign() {
-  const width='65%' ; 
+    const { width } = useWindowSize();
+
+  const descwidth=width<768? '80%':'65%'; 
   return (
     <div style={{ padding: '40px 20px' }}>
+      
       <Product
         title="KITCHEN AND DINING"
         subtitle="2025"
@@ -49,7 +54,7 @@ function InteriorDesign() {
           { src: D4, style:  { transform: 'scale(1.1) translate(0px, 0px)' } },
           
                    ]}
-        DescMaxWidth={width}
+        DescMaxWidth={descwidth}
       />
 
       <Product
@@ -66,7 +71,7 @@ function InteriorDesign() {
           { src: W5, style:  { transform: 'scale(1.1) translate(0px, 0px)' } },
           { src: W3, style:  { transform: 'scale(1.1) translate(0px, 0px)' } },
                    ]}
-         DescMaxWidth={width}
+         DescMaxWidth={descwidth}
         
       />
 
@@ -88,7 +93,7 @@ function InteriorDesign() {
           descMarginTop={
           70
         }
-         DescMaxWidth={width}
+         DescMaxWidth={descwidth}
       />
 
 
@@ -110,7 +115,7 @@ function InteriorDesign() {
         descMarginTop={
           60
         }
-         DescMaxWidth={width}
+         DescMaxWidth={descwidth}
       />
 
 

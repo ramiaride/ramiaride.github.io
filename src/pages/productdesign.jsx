@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from './components/productdesign-com/product';
+import Topbar from '../components/TopBar';
 
 function ProductDesign() {
   const products_dir = "/assets/products/";
@@ -13,6 +14,7 @@ function ProductDesign() {
 
   return (
     <div style={{ padding: '40px 20px' }}>
+     
       <Product
         title="TRIEND"
         subtitle="2025"

@@ -211,3 +211,110 @@
     transform: translateY(0);
   }
 }
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .About-main {
+    min-height: 100%;
+    padding: 40px 20px;
+    margin-top: 50px;
+    
+    
+  }
+
+  .About-content {
+    width: 100%;
+    margin: 0;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(188, 166, 98, 0.15);
+    align-items: center;
+    text-align: center;
+min-height:490px;
+
+    
+  }
+
+  .About-title {
+    font-size: 35px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .content-par {
+    font-size: 0.935rem;
+    line-height: 1.3;
+    margin-top: 40px;
+    text-align: justify;
+    max-width: 95%;
+  }
+
+  /* Resize and reposition blobs */
+  .blob1,
+  .blob2 {
+    width: 200px;
+    height: 200px;
+    filter: blur(60px);
+    opacity: 0.15;
+  }
+
+  .blob1 {
+    top: 5%;
+    left: -10%;
+  }
+
+  .blob2 {
+    bottom: 5%;
+    right: -10%;
+  }
+
+  /* Resize and reposition geometric shapes */
+  .shape1 {
+    width: 80px;
+    height: 8px;
+    top: 25%;
+    right: 10%;
+  }
+
+  .shape2 {
+    width: 8px;
+    height: 120px;
+    bottom: 20%;
+    left: 10%;
+  }
+
+  /* Resize decorative dots */
+  .dot1 {
+    width: 10px;
+    height: 10px;
+    top: 3%;
+    right: 8%;
+  }
+
+  .dot2 {
+    width: 25px;
+    height: 25px;
+    bottom: 10%;
+    left: 5%;
+  }
+
+  /* Resize decorative lines */
+  .line1 {
+    width: 2px;
+    height: 40px;
+    top: 18%;
+    left: 6%;
+  }
+
+  .line2 {
+    width: 2px;
+    height: 30px;
+    bottom: 8%;
+    right: 10%;
+  }
+ 
+}
+
+

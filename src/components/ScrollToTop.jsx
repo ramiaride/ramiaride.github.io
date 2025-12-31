@@ -1,15 +1,49 @@
-// src/components/ScrollToTop.jsx
+import './styles/TopBar.css';
+import logo from '/assets/logo.png';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Dropdown } from 'flowbite-react';
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
+function Topbar() {
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [pathname]);
+    // Optional: scroll to top on navigation
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
-  return null;
+  const handleNavigate = (path) => {
+    navigate(path);
+  };
+
+  return (
+    <div className="topbar">
+      <div className="logo" onClick={() => handleNavigate('/')}>
+        <img className="logo-img" src={logo} alt="Logo" />
+      </div>
+
+      <Dropdown
+        label="MENU"
+        dismissOnClick={true}
+        inline
+        className="modern-dropdown"
+      >
+        <Dropdown.Item onClick={() => handleNavigate('/')}>
+          HOME
+        </Dropdown.Item>
+        <Dropdown.Item onClick={() => handleNavigate('/productdesign')}>
+          PRODUCT DESIGN
+        </Dropdown.Item>
+        <Dropdown.Item onClick={() => handleNavigate('/interiordesign')}>
+          INTERIOR DESIGN
+        </Dropdown.Item>
+        <Dropdown.Item onClick={() => handleNavigate('/graphicdesign')}>
+          GRAPHIC DESIGN
+        </Dropdown.Item>
+      </Dropdown>
+    </div>
+  );
 }
 
-export default ScrollToTop;
+export default Topbar;

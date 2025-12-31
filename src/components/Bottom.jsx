@@ -9,17 +9,18 @@ function Bottom() {
                 <div className="left-column"> 
                    <p className="contact-left">
           CONTACT</p>
+           <p className="email"> RAMIARIDE@GMAIL.COM </p>
           <div className="numbers-con"> 
                   <p className="numbers"> 
-                    +393317889359<br></br>
-                    +972545408049  </p>
+                    +393317889359
+                  </p>
                     <p className="numbers-spec"> 
-                    Phone<br></br>
-                    WhatsApp  </p>
+                    Phone
+                   </p>
                     </div>
                     <div>
                       
-                    <p className="email"> RAMIARIDE@GMAIL.COM </p>
+                 
                     </div>
                   </div>
                    <div className="right-column"> 
