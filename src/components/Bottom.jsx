@@ -12,7 +12,7 @@ function Bottom() {
            <p className="email"> RAMIARIDE@GMAIL.COM </p>
           <div className="numbers-con"> 
                   <p className="numbers"> 
-                    +393317889359
+                    +3933178893599
                   </p>
                 
                     </div>
