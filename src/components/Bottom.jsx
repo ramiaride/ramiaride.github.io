@@ -14,9 +14,7 @@ function Bottom() {
                   <p className="numbers"> 
                     +393317889359
                   </p>
-                    <p className="numbers-spec"> 
-                    Phone
-                   </p>
+                
                     </div>
                     <div>
                       
